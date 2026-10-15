@@ -22,7 +22,6 @@ public class SpaceMotd extends JavaPlugin {
         getLogger().info("§x§f§f§7§c§0§0╚");
     }
 
-    @Override
     public void onEnable() {
         saveDefaultConfig();
         configFile = new File(getDataFolder(), "config.yml");

@@ -11,7 +11,7 @@ import org.json.simple.parser.JSONParser;
 
 public class UpdateChecker {
     private final JavaPlugin plugin;
-    private final String repo = "MoonMag53/SpaceMotd";
+    private final String repo = "m0onmag/SpaceMotd";
     private final Logger logger;
 
     public UpdateChecker(JavaPlugin plugin) {
@@ -22,7 +22,7 @@ public class UpdateChecker {
     public void checkForUpdates() {
         Bukkit.getScheduler().runTaskAsynchronously(this.plugin, () -> {
             try {
-                URL url = new URL("https://api.github.com/repos/MoonMag53/SpaceMotd/releases/latest");
+                URL url = new URL("https://api.github.com/repos/m0onmag/SpaceMotd/releases/latest");
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
                 conn.addRequestProperty("User-Agent", "Mozilla/5.0");
                 if (conn.getResponseCode() == 200) {
@@ -32,7 +32,7 @@ public class UpdateChecker {
                     String currentVersion = this.plugin.getDescription().getVersion();
                     if (!currentVersion.equalsIgnoreCase(latestVersion)) {
                         this.logger.warning("Доступна новая версия плагина: " + latestVersion + " (текущая: " + currentVersion + ")");
-                        this.logger.warning("Скачать: https://github.com/MoonMag53/SpaceMotd/releases/tag/" + latestVersion);
+                        this.logger.warning("Скачать: https://github.com/m0onmag/SpaceMotd/releases/tag/" + latestVersion);
                     } else {
                         this.logger.info("Вы используете последнюю версию плагина (" + currentVersion + ")");
                     }
@@ -45,7 +45,6 @@ public class UpdateChecker {
                 Exception e = var7;
                 this.logger.warning("Ошибка при проверке обновлений: " + e.getMessage());
             }
-
         });
     }
 }

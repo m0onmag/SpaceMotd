@@ -38,7 +38,7 @@ public class SpaceMotd extends JavaPlugin {
         getLogger().info("§x§f§f§7§c§0§0╚");
         new ru.moonmag.utils.Metrics(this, 25622);
         new ru.moonmag.utils.UpdateChecker(this).checkForUpdates();
-        }
+    }
 
     public void reload() {
         config = YamlConfiguration.loadConfiguration(configFile);

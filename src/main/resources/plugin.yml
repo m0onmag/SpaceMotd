@@ -19,7 +19,7 @@ name: SpaceMotd
 version: '1.2'
 main: ru.moonmag.SpaceMotd
 api-version: '1.16'
-author: [ SpaceDev ]
+author: [ m0onmag ]
 commands:
   spacemotd:
     permission: spacemotd.use
